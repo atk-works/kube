@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: domainturva-server
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: image=ghcr.io/atk-works/domainturva-core/server:main
+    argocd-image-updater.argoproj.io/image.update-strategy: digest
+    argocd-image-updater.argoproj.io/image.kustomize.image-name: server
+    argocd-image-updater.argoproj.io/image.pull-secret: pullsecret:domainturva/ghcr-login
 spec:
   project: domainturva
   source:
