@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/atk-works/domainturva-core
     targetRevision: main
-    path: kubernetes/server
+    path: kubernetes/gemini
   destination:
     server: https://kubernetes.default.svc
     namespace: domainturva
